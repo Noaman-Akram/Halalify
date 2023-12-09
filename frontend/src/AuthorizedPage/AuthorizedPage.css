@@ -1,0 +1,17 @@
+/* CSS variables */
+@import url(../variables.css);
+
+.AuthorizedPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: var(--primary-color-main);
+}
+
+@media (max-width: 720px){
+    .AuthorizedPage{
+        flex-direction: column;
+        align-items: center;
+    }
+}

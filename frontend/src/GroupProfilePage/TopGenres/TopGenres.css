@@ -1,0 +1,146 @@
+@import url(../../variables.css);
+
+.top-genres-root {
+    height: 100vh;
+    width: auto;
+    background-color: var(--blue-color-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.top-genres-heading {
+    margin-left: 4vw;
+    padding-top: 2vh;
+    width: auto;
+    height: 10vh;
+}
+
+.top-genres-heading .text {
+    /* color: var(--primary-color-main); */
+    color: white;
+    margin-left: 6px;
+    font-size: 4vw;
+    font-size: clamp(25px, 4vw, 40px);
+}
+
+.top-genres-heading .under-bar{
+    margin-left: 10px;
+    width: 75px;
+    height: 3px;
+    margin-bottom: 0px;
+    /* background-color: var(--primary-color-main); */
+    background-color: var(--off-white-color);
+}
+
+.genre-bars {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow-y: hidden;
+}
+
+.genre_bar_div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    animation-name: genreBars;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0, 0.45, 0.88, 1.09);
+}
+
+@keyframes genreBars {
+    from {transform: translatex(-50em)}
+    to {transform: translatex(0em);}
+}
+
+.genre_bar{
+    display: flex;
+    height: 12vh;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 50px;
+    box-shadow: 1px 1px 3px 0px var(--primary-color-1);
+    transition: 0.3s;
+}
+
+.genre_bar:hover {
+    filter: brightness(110%);
+}
+
+.genre_name{
+    margin-right: 2%;
+    color: white;
+}
+
+.genre_percentage{
+    margin-left: 1%;
+    color: white;
+    text-shadow: 1px 1px 2px var(--primary-color-1);
+}
+
+.one .genre_bar{
+    background-color: rgba(123,123,253);
+}
+.one strong {
+    font-size: 5vw;
+}
+
+.two .genre_bar{
+    background-color: rgba(255, 179, 71);
+}
+.two strong {
+    font-size: clamp(10px, 4vw, 60px);
+}
+
+.three .genre_bar{
+    background-color: rgba(157, 92, 99);
+}
+.three strong {
+    font-size: clamp(10px, 3.75vw, 50px);
+}
+
+.four .genre_bar{
+    background-color: rgba(119, 221, 119);
+}
+.four strong {
+    font-size: clamp(10px, 3vw, 40px);
+}
+
+.five .genre_bar{
+    background-color: rgba(100, 190, 239);
+}
+.five strong {
+    font-size: clamp(10px, 2.75vw, 35px);
+}
+
+@media (max-width:780px) {
+    .genre-bars{
+        justify-content: space-around;
+    }
+    .genre_bar{
+        height: 70px;
+    }
+    .genre_name{
+        margin-right: 10px;
+    }
+    .genre_percentage{
+        margin-left: 10px;
+    }
+    .one strong{
+        font-size: 25px;
+    }
+    .two strong{
+        font-size: 25px;
+    }
+    .three strong{
+        font-size: 25px;
+    }
+    .four strong{
+        font-size: 25px;
+    }
+    .five strong{
+        font-size: 25px;
+    }
+}

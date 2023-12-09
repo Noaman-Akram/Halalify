@@ -1,0 +1,50 @@
+@import url(../../variables.css);
+
+.baby-members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 40vh;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    height: fit-content;
+}
+
+.container-baby {
+    width: auto;
+    margin-top: 2vh;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+    margin-bottom: 2vh; 
+    position: relative;
+    text-align: center;
+}
+
+.icon-baby {
+    height: clamp(100px, 12vw, 175px);
+    width: clamp(100px, 12vw, 175px);
+    object-fit: cover;
+    object-position: 50%;
+    border-radius: 50rem;
+}
+
+.baby-name {
+    font-size: clamp(12px, 1.75vw, 18px);
+    color:transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.45s;
+}
+
+.container-baby:hover .icon-baby {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.container-baby:hover .baby-name {
+    color: var(--off-white-color);
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+@import url(../variables.css);
+
+.text-blurb {
+    margin-right: 4vw;
+    height: fit-content;
+}
+
+.display-babies {
+    display: flex;
+    margin-right: 2vw;
+    margin-top: 20px;
+    height: fit-content;
+    justify-content: center;
+}
+
+.under-bar {
+    margin-left: 5px;
+    width: 75px;
+    height: 3px;
+    margin-bottom: 0px;
+    background-color: var(--off-white-color);
+}
+
+.about {
+    margin-left: 4vw;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-root {
+    width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: var(--primary-color-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+

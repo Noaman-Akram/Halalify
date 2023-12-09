@@ -1,0 +1,143 @@
+/* CSS variables */
+@import url(../../variables.css);
+
+.CreateOrJoinBox{
+    margin-top: 2vw;
+    margin-left: 5vw;
+    padding: 10px;
+    padding-left: 20px;
+    z-index: 2;
+    /* background-color: rgba(218, 223, 232, 0.075); */
+    /* border-radius: 25px; */
+}
+
+.openCollapse{
+    color: var(--off-white-color);
+    font-size: 2vw;
+    font-weight: 550;
+    width: 12em;
+    margin-top: 0.5vw;
+}
+
+.openCollapse:hover{
+    color: var(--blue-color-1);
+    cursor: pointer;
+}
+
+.openCollapse:hover .create_icon {
+    /* Shitty solution for making the icon also change color on hover */
+    filter: brightness(0) saturate(100%) invert(72%) sepia(76%) saturate(768%) hue-rotate(192deg) brightness(105%) contrast(99%);
+}
+
+.openCollapse:hover .join_icon {
+    /* Shitty solution for making the icon also change color on hover */
+    filter: brightness(0) saturate(100%) invert(72%) sepia(76%) saturate(768%) hue-rotate(192deg) brightness(105%) contrast(99%);
+}
+
+.collapseBody{
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    font-size: 1.75vw;
+    width: 11em;
+    padding-left: 1em;
+    margin-left: 1vw;
+    padding-top: 0em;
+    padding-bottom: 0.5em;
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+input::placeholder{
+    color: var(--neutral-color-main);
+    background: 
+      linear-gradient(var(--neutral-color-7), var(--neutral-color-7)) center bottom 0/95% 1px no-repeat;
+}
+
+.join_icon{
+    height: 2vw;
+    width: 2vw;
+    margin-right: 1.25vw;
+}
+
+.create_icon{
+    height: 1.5vw;
+    width: 1.5vw;
+    margin-right: 1vw;
+    margin-left: 0.5vw;
+}
+
+.arrow{
+    width: 1.75vw;
+    height: 1.5vw;
+    cursor: pointer;
+    margin-bottom: 0.5vw;
+}
+
+.continue-arrow{
+    margin-left: 10px;
+    fill: var(--off-white-color);
+}
+
+.continue-arrow:hover{
+    fill: var(--blue-color-2);
+}
+.modal-content span {
+    color: var(--blue-color-main);
+}    
+
+.join-error .error-alert {
+    position: absolute;
+    margin-left: 20px;
+}
+.create-error .error-alert {
+    margin-left: 20px;
+}
+.create-error .error-alert .alert {
+    height: 50px;
+    width: 235px;
+}
+.join-error .error-alert .alert {
+    height: 50px;
+    width: 235px;
+}
+
+@media (max-width: 720px){
+    .CreateOrJoinBox{
+        width: 230px;
+        padding-top: 35px;
+        padding-left: 0;
+    }
+    .openCollapse{
+        font-size: 20px;
+    }
+    .collapseBody{
+        width: 15rem;
+    }
+    .input{
+        font-size: 20px;
+        width: 10em;
+    }
+    .arrow{
+        width: 20px;
+        height: 20px;
+        padding-left: 0px;
+    }
+    .join_icon{
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
+    .create_icon{
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+    .error-alert {
+        margin-left: 0px;
+    }
+}
